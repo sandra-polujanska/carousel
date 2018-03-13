@@ -18,5 +18,19 @@ function changeSlide() {
     }
 }
 
-setInterval(changeSlide, 3000) 
+setInterval(changeSlide, 3000);
 
+/* function clickSlide () {
+ var left = $('.slider-left');
+  var right = $('.slider-right');
+  left.on('click', function () {
+    
+    }
+     
+  );
+  right.on('click', function() {
+    changeSlide ();
+  });
+    
+}
+clickSlide (); */
