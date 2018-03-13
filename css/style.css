@@ -1,0 +1,44 @@
+#carousel {
+    margin: 0 auto;
+    border: 20px solid #292a2b;
+    border-radius: 2%;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+}
+
+ul {
+    width: 2500px;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    width: 500px;
+    height: 300px;
+}
+.slider-left {
+    position: absolute;
+    font-size: 30px;
+    display: block;
+    right: 75%;
+    top: 30%;
+    color: black;
+    
+    
+  }
+  .slider-right {
+    position: absolute;
+    display: block;
+    left: 75%;
+    top: 30%;
+    color: black;
+    font-size: 30px;
+  }
