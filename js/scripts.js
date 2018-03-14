@@ -20,17 +20,27 @@ function changeSlide() {
 
 setInterval(changeSlide, 3000);
 
-/* function clickSlide () {
+function clickSlide () {
  var left = $('.slider-left');
   var right = $('.slider-right');
-  left.on('click', function () {
+  left.on('click', function() {
     
+    function movePreviousSlide () {
+        var firstItem = carouselList.find("li:first");
+        var lastItem = carouselList.find("li:last");
+        firstItem.before(lastItem);
+        carouselList.css({marginLeft: -500});
     }
-     
-  );
+    movePreviousSlide();
+    carouselList.animate({'marginLeft':0}, 500, changeSlide);
+      
+  });
   right.on('click', function() {
-    changeSlide ();
+    changeSlide();
   });
     
 }
-clickSlide (); */
+
+clickSlide();
+
+
