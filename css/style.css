@@ -1,10 +1,15 @@
+body {
+     background-color: #838384;
+}
+
 #carousel {
     margin: 0 auto;
-    border: 20px solid #292a2b;
+    border: 15px solid #292a2b;
     border-radius: 2%;
     width: 500px;
     height: 300px;
     overflow: hidden;
+    position: static;
 }
 
 img {
@@ -24,21 +29,23 @@ li {
     width: 500px;
     height: 300px;
 }
+
 .slider-left {
     position: absolute;
     font-size: 30px;
     display: block;
-    right: 75%;
-    top: 30%;
+    right: 52%;
+    margin-top: 15px;
     color: black;
-    
-    
+    float: left;
   }
+
   .slider-right {
     position: absolute;
     display: block;
-    left: 75%;
-    top: 30%;
+    left: 52%;
+    margin-top: 15px;
     color: black;
     font-size: 30px;
+    float: left;
   }

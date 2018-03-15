@@ -16,13 +16,15 @@ function changeSlide() {
         lastItem.after(firstItem);
         carouselList.css({marginLeft:0});
     }
-}
+} 
 
-setInterval(changeSlide, 3000);
+var change = setInterval (function() {changeSlide() }, 3000);
+
+var left = $('.slider-left');
+var right = $('.slider-right');
 
 function clickSlide () {
- var left = $('.slider-left');
-  var right = $('.slider-right');
+ 
   left.on('click', function() {
     
     function movePreviousSlide () {
@@ -31,16 +33,28 @@ function clickSlide () {
         firstItem.before(lastItem);
         carouselList.css({marginLeft: -500});
     }
-    movePreviousSlide();
-    carouselList.animate({'marginLeft':0}, 500, changeSlide);
-      
+  
+        movePreviousSlide();
+       carouselList.animate({'marginLeft':0}, 500);
+      clearInterval(change);
   });
   right.on('click', function() {
-    changeSlide();
-  });
     
-}
+      carouselList.animate({'marginLeft':-500}, 500, moveFirstSlide);
+    
+    function moveFirstSlide () {
+        var firstItem = carouselList.find("li:first");
+        var lastItem = carouselList.find("li:last");
+        lastItem.after(firstItem);
+        carouselList.css({marginLeft:0}) };
+        clearInterval(change);
+  });
+
+};
 
 clickSlide();
+
+
+
 
 
