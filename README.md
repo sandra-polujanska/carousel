@@ -1,2 +1,3 @@
-# carousel
-https://sandra-polujanska.github.io/carousel/
+My own simple carousel with photos of nature.
+
+Used: HTML, CSS, jQuery.
